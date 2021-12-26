@@ -113,7 +113,8 @@ ros_controllers launch file
 
 ## launch/moveit.rviz
 Configuration file for Rviz with the Motion Planning Plugin already setup.
-Used by passing [roslaunch moveit_rivz.launch config:=true]
+Used by passing 
+#### roslaunch moveit_rivz.launch config:=true
 
 ## .setup_assisant
 Moveit Setup Assistant's hidden settings file. You should not need to edit this file.
