@@ -39,6 +39,91 @@ ros_control에 대한 컨트롤러 구성을 생성합니다.
 Creates configurations 3d sensors.
 
 ## launch/move_group.launch
+MoveGroup 작업 및 기타 매개변수 MoveGroup 작업을 제공하는 move_group 노드를 시작합니다.
+
+## launch/planning_context.launch
+Moveit 실행에 필요한 ROS 매개변수 서버에 대한 설정을 로드합니다.
+여기에는 SRDF, Joints_limits.yaml 파일, ompl_planning.yaml 파일, 선택적으로 URDF 등이 포함됩니다.
+
+## launch/moveit_rviz.launch
+목표 상태를 설정할 수 있는 대화형 마커로 실행되는 로봇의 계획 그룹을 Rviz에서 시각화합니다.
+
+## launch/ompl_planning_pipeline.launch.xml
+OMPL 계획 플러그인이 필요한 다른 시작 파일에 포함될 예정입니다.
+매개변수 서버의 적절한 플러그인 이름과 계획 요청 어댑터의 기본 선택을 정의합니다.
+
+## launch/pilz_industrial_motion_planner_planning_pipeline.launch.xml
+Pilz 산업용 모션 플래너 플래닝 플러그인이 필요한 다른 출시 파일에 포함되도록 제작되었습니다.
+매개변수 서버의 적절한 플러빈 이름과 계획 요청 어댑터의 기본 선택을 정의합니다.
+
+## launch/chomp_planning_pipeline.launch.xml
+CHOMP 계획 플러그인이 필요한 다른 시작 파일에 포함될 예정입니다.
+매개변수 서버의 적절한 플러빈 이름과 계획 요청 어댑터의 기본 선택을 정의합니다.
+
+## launch/planning_pipeline.launch.xml
+Helper launch file that can choose between different planning pipelines to be loaded
+
+## launch/warehouse_settings.launch.xml
+Helper launch file that specifies default settings for MongoDB
+
+## launch/warehouse.launch
+Launch file for starting MongoDB
+
+## launch/default_warehouse_db.launch
+Launch file for starting the warehouse with a default MongoDB
+
+## launch/run_benchmark_ompl.launch
+Launch file for benchmarking OMPL planners.
+
+## launch/sensor_manager.launch.xml
+Helper launch file that can choose between different sensor managers to be loaded.
+
+## launch/aubo_i3_moveit_sensor_manager.launch.xml
+로봇용으로 구현된 Moveit 센서 관리자와 관련된 설정을 위한 자리 표시자입니다.
+
+## launch/trajectory_execution.launch.xml
+trajectory_execution_manager::TrajectoryExecutionManager를 사용하여 궤적을 실행하는 데 필요한 ROS 매개변수 서버에 대한 설정을 로드합니다.
+
+## launch/fake_moveit_controller_manager.launch.xml
+Loads the fake controller plugin
+
+## launch/simple_moveit_controller_manager.launch.xml
+Loads the default controller plugin.
+
+## launch/ros_control_moveit_controller_manager.launch.xml
+Loads the ros_control controller plugin.
+
+## launch/demo.launch
+Run a demo of Moveit.
+
+## launch/demo_gazebo.launch
+Run a demo of Moveit with Gazebo and Rviz
+
+## launch/gazebo.launch
+Gazebo launch file which also launchers ros_controllers and sends robot urdf to param server, then using gazebo_ros pkg the robot is spawned to Gazebo.
+
+## launch/joystick_control.launch
+Control the Rviz Motion Planning plugin with a joystick.
+
+## launch/setup_assistant.launch
+Launch file for easily re-starting the Moveit Setup Assistant to edit this robot's generated configuration package.
+
+## launch/ros_controllers.launch
+ros_controllers launch file
+
+## launch/moveit.rviz
+Configuration file for Rviz with the Motion Planning Plugin already setup.
+Used by passing [roslaunch moveit_rivz.launch config:=true]
+
+## .setup_assisant
+Moveit Setup Assistant's hidden settings file. You should not need to edit this file.
+
+
+
+
+
+
+
 
 
 
